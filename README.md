@@ -1,2 +1,3 @@
-# argon2-research-article
-Research work for the Security in Communication Systems course for Master's in Informatics Engineering
+# Argon2 Research Paper
+
+Research work made for the Security in Communication Systems course from Master's in Informatics Engineering
