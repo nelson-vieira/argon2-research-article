@@ -203,11 +203,41 @@ pragmática significante.
 
 \section{Comparação com outros algoritmos existentes}
 
+Existem vários algoritmos de hash disponíveis para além do algoritmo em análise, Argon2, como por 
+exemplo o MD5, SHA1, SHA256, PBKDF2, Bcrypt, Scrypt, ou simplesmente usar plaintext. Torna-se 
+complicado escolher o algoritmo a usar de entre várias escolhas, portanto 
+nesta secção será realizada uma comparação dos algoritmos acima descritos 
+com o Argon2 e as suas derivações, Argon2i, Argon2d e Argon2id. 
+
+\subsection{Utilização de plaintext}
+
+Começando com o mais óbvio, usar plaintext (texto legível) para guardar informação delicada e 
+portanto que deve ser escondida é o que deve ser evitado a todo o custo, pois 
+qualquer pesquisa numa base de dados irá revelar todo o conteúdo de forma aberta 
+a qualquer pessoa, daí a necessidade de usarmos algum algoritmo que torne esta 
+informação encriptada. Ainda assim apesar da riqueza de métodos de criptografia 
+existentes, algumas empresas ainda armazenam as senhas em plaintext, isso significa 
+que qualquer pessoa com acesso pode ler todas as informações altamente confidenciais, 
+como as senhas, datas de nascimento e números de cartão de crédito. 
+Se uma senha estiver armazenada em plaintext, esta também pode ser rabiscada num bloco de notas e 
+deixada na sala de espera para qualquer indivíduo mal itencionado ver. Bases de dados com 
+senhas em plaintext tornam a contenção muito mais difícil porque o atacante compromete 
+instantaneamente a segurança de todos os utilizadores do serviço web. Poderia ser 
+considerado que um ataque directo num servidor é um evento extremamente improvável, 
+mas incidentes recentes e repetidos em grande escala (afetando milhões de utilizadores) 
+têm vindo a aumentar nos últimos anos \cite{ashley2022cyber} e principalmente com a 
+guerra na Ucrânia temos visto isso a acontecer.
+
+\subsection{Comparação com MD5}
+
+Um dos algoritmos mais usados em bases de dados é o MD5, e é também um dos algoritmos mais velhos, 
+normalmente por ser um algoritmo muito usado e pela sua idade, levaria a pensar que 
+este seria um dos algoritmos mais seguros que existem, mas isto não se verifica 
 Vamos comparar o argon2 com sha-256, md5, etc.
 
 \section{Conclusão}
 
-O argon2 é um dos algoritmos de hash mais seguros da atualidade, é inspirado nalguns 
+O Argon2 é um dos algoritmos de hash mais seguros da atualidade, é inspirado nalguns 
 algoritmos também bastante seguros como o bcrypt e por isso acaba por ser uma 
 evolução lógica dos algoritmos de hash. Apenas uma versão do algoritmo tem 
 vulnerabilidades, mas estas vulnerabilidades podem ser negadas como explicado na 
